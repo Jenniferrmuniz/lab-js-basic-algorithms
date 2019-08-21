@@ -1,0 +1,51 @@
+let hacker1 = 'Jennifer';
+let hacker2 = 'Emily';
+
+
+console.log('The driver\'s name is '+hacker1+ '.');
+console.log('The navigator\'s name is ' +hacker2+ '.');
+
+if(hacker1.length > hacker2.length){
+  console.log(`The driver has the longest name, it has ${hacker1.length} characters.`);
+}
+else if(hacker1.length < hacker2.length){
+  console.log(`Yo, navigator has the longest name, it has ${hacker2.length} characters.`);
+}
+else{
+  console.log('Wow, you both got equally long names, ' +hacker1.length+ ' characters!');
+}
+
+
+let upperCased = hacker1.toUpperCase();
+let capitalName = '';
+
+for(let i=0; i<hacker1.length; i++){
+  
+  capitalName = capitalName.concat(upperCased[i]);
+  
+  if(i !== hacker1.length-1){
+  capitalName = capitalName.concat(' ');
+  }
+}
+
+console.log(capitalName);
+
+console.log(reverseString(hacker2));
+
+function reverseString(str){
+  var splitString = str.split('');
+  var reverseArray = splitString.reverse();
+  var joinArray = reverseArray.join('');
+  return joinArray;
+}
+
+
+if(hacker1<hacker2){
+  console.log('The drivers name goes first.')
+}
+else if(hacker1>hacker2){
+  console.log('Yo, the navigator goes first definitely.') 
+}
+else{
+  console.log('What!? You both got the same name?!') 
+}
